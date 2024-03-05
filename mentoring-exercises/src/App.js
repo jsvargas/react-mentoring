@@ -1,7 +1,7 @@
 import "./App.css";
-import Counter from "./components/counter";
-import GenreSelect from "./components/genreSelect";
-import SearchForm from "./components/searchForm";
+import Counter from "./components/Counter/counter";
+import GenreSelect from "./components/GenreSelect/genreSelect";
+import SearchForm from "./components/SearchForm/searchForm";
 import React, { useState } from "react";
 
 const genres = ["action", "comedy", "terror"];
@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <Counter initialValue={0} />
-      <SearchForm onSearch={onSearch} />
+      <SearchForm initialSearch="Hello" onSearch={onSearch} />
       <GenreSelect
         genres={genres}
         currentlySelected={selectedGenre}

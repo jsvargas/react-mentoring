@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-function SearchForm({ onSearch }) {
-  const [searchText, setSearchText] = useState("");
+function SearchForm({ initialSearch, onSearch }) {
+  const [searchText, setSearchText] = useState(initialSearch);
 
   const triggerCallback = () => {
     onSearch(searchText);
@@ -19,6 +19,7 @@ function SearchForm({ onSearch }) {
         type="text"
         id="search"
         placeholder="Search..."
+        value={searchText}
         onChange={(event) => {
           setSearchText(event.target.value);
         }}

@@ -25,6 +25,7 @@ export default class Counter extends React.Component {
       "button",
       {
         onClick: this.handleDecrement,
+        "data-cy": "decrementBtn",
       },
       "-"
     );
@@ -33,6 +34,7 @@ export default class Counter extends React.Component {
       "button",
       {
         onClick: this.handleIncrement,
+        "data-cy": "incrementBtn",
       },
       "+"
     );
@@ -41,7 +43,7 @@ export default class Counter extends React.Component {
       "div",
       { className: "counterDiv" },
       buttonDecrement,
-      this.state.number,
+      createElement("span", { "data-cy": "valueSpan" }, this.state.number),
       buttonIncrement
     );
   }

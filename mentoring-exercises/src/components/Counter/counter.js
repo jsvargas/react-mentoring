@@ -48,3 +48,7 @@ export default class Counter extends React.Component {
     );
   }
 }
+
+Counter.defaultProps = {
+  initialValue: 0,
+};

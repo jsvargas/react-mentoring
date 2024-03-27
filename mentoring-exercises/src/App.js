@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import Counter from "./components/Counter/counter";
 import GenreSelect from "./components/GenreSelect/genreSelect";
 import SearchForm from "./components/SearchForm/searchForm";

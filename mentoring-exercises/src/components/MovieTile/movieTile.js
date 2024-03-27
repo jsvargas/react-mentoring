@@ -18,7 +18,7 @@ function MovieTile({ imageUrl, movieName, releaseYear, genres, handleClick }) {
   };
 
   return (
-    <div className="card" onClick={() => handleClick()}>
+    <div className="card" data-testid="movieTile" onClick={() => handleClick()}>
       <button
         className="context-menu"
         onClick={() => handleClickMenu(true)}
@@ -47,7 +47,7 @@ function MovieTile({ imageUrl, movieName, releaseYear, genres, handleClick }) {
 
         <div className="subtitle">
           {genres.map((genre) => (
-            <span>{genre}</span>
+            <span key={genre}>{genre}</span>
           ))}
         </div>
       </div>

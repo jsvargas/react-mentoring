@@ -15,14 +15,17 @@ import React from "react";
 
 function SortControl({ selected, changeSelected }) {
   const handleChange = function (newSelection) {
-    console.log(newSelection);
     changeSelected(newSelection);
   };
   return (
     <div>
       <span>Sort by</span>
       <span>
-        <select onChange={(e) => handleChange(e.target.value)} value={selected}>
+        <select
+          data-testid="select"
+          onChange={(e) => handleChange(e.target.value)}
+          value={selected}
+        >
           <option value="releaseDate">Release date</option>
           <option value="title">Title</option>
         </select>
